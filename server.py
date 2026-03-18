@@ -19,6 +19,8 @@ from huggingface_hub import login
 from source import clair
 from source import speech
 from source.clair import RepetitionDetectedError
+import socketio as sio_module
+import json
 
 
 def setup_logger(name, log_file, level=logging.INFO):
@@ -180,6 +182,37 @@ def main():
         last_processed_turn = {'last_turn': None}
 
 
+        source = WebSocketAudioSource(MIC_SAMPLE_RATE, HOST, PORT)
+        # Connect to Bazaar
+        bazaar_client = sio_module.Client(logger=False, engineio_logger=False)
+
+        # Trigger map from MAI to client_mic audio categories
+        trigger_map = {
+            "COGNITIVE": "cognitive",
+            "METACOGNITIVE": "metacognitive",
+            "SOCIAL": "shared_perspective",
+            "AFFECTIVE": "socio_emotional",
+        }
+
+        @bazaar_client.on("sendtrigger")
+        def on_trigger(*args):
+            logger.info(f"Received trigger from Bazaar: {args}")
+            trigger_name = args[1] if len(args) > 1 else args[0]
+            selected_move = trigger_map.get(trigger_name.upper())
+            if selected_move:
+                response = json.dumps({"response": "intervention", "selected_move": selected_move})
+                logger.info(f"Sending trigger to client_mic: {response}")
+                try:
+                    source.send(response)
+                except Exception as e:
+                    logger.warning(f"Could not send trigger to client_mic (not connected?): {e}")
+        try:
+            bazaar_client.connect("http://localhost:8000", socketio_path="/bazsocket/socket.io", transports=["websocket"])
+            bazaar_client.emit("adduser", ("testroom", "server", False))
+            logger.info("Connected to Bazaar successfully")
+        except Exception as e:
+            logger.warning(f"Could not connect to Bazaar at startup: {e}. Will continue without Bazaar.")
+
         #Stub
         def decision_stub(turn, dialogue):
             """
@@ -198,10 +231,10 @@ def main():
                 "text": text,
             })
 
+            bazaar_client.emit("sendchatwithroom", ("testroom", f"{username}: {text}"))
             return None  # no response sent back to client
 
         # Set up audio source
-        source = WebSocketAudioSource(MIC_SAMPLE_RATE, HOST, PORT)
 
         # Define the processing pipeline
         source.stream.pipe(

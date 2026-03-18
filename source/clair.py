@@ -52,7 +52,7 @@ def parse_turn(transcription: str,
     
     # Initialize with default values if dialogue is empty
     if dialogue:
-        last_timestamp = dialogue[-1]["timestamp"]
+        last_timestamp = pd.Timestamp(dialogue[-1]["timestamp"])
         last_user = dialogue[-1]["username"]
     else:
         last_timestamp = pd.Timestamp.now() - pd.Timedelta(seconds=turn_threshold + 1)  # Ensuring a new turn is detected for the first entry
@@ -172,7 +172,7 @@ def print_dialogue_info(dialogue):
     speakers = set([item['username'] for item in dialogue if 'username' in item])
     print("\tNumber of speakers:", len(speakers), flush=True)
     if dialogue:
-        duration = dialogue[-1]['timestamp'] - dialogue[0]['timestamp']
+        duration = pd.Timestamp(dialogue[-1]['timestamp']) - pd.Timestamp(dialogue[0]['timestamp'])
         print("\tTime duration:", duration, flush=True)
     print("\t====================================\n", flush=True)
 
