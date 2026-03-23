@@ -206,6 +206,20 @@ def main():
                     source.send(response)
                 except Exception as e:
                     logger.warning(f"Could not send trigger to client_mic (not connected?): {e}")
+
+        @bazaar_client.on("updatechat")
+        def on_updatechat(*args):
+            username = args[0] if len(args) > 0 else ""
+            message = args[1] if len(args) > 1 else ""
+            logger.info(f"Received updatechat from Bazaar: username={username} message={message}")
+            selected_move = trigger_map.get(message.strip().upper())
+            if selected_move:
+                response = json.dumps({"response": "intervention", "selected_move": selected_move})
+                logger.info(f"Sending trigger to client_mic: {response}")
+                try:
+                    source.send(response)
+                except Exception as e:
+                    logger.warning(f"Could not send trigger to client_mic (not connected?): {e}")
         try:
             bazaar_client.connect("http://localhost:8000", socketio_path="/bazsocket/socket.io", transports=["websocket"])
             bazaar_client.emit("adduser", ("testroom", "server", False))
