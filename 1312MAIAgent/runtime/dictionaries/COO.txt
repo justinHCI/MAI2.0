@@ -1,0 +1,107 @@
+read
+read aloud
+let's read
+case description
+let's go through 
+let's see what it says
+let's see what we have to do
+read the instructions
+follow the instructions
+check the instructions
+continue
+start
+begin
+do
+make
+write
+note
+measure
+put
+place
+lower
+hold
+take
+bring
+fetch
+get
+give
+move
+open
+close
+return
+carry out
+investigate
+explain
+describe
+copy
+paste
+let's
+lets
+we need to
+we should
+we have to
+you have to
+someone can
+someone else
+do you want to
+who wants to
+can you
+go to
+go get
+go bring
+put it there
+put it here
+put it in
+put it into
+put them
+write it down
+write that down
+read this
+read that
+read next
+read first
+read forward
+read everything
+read the whole instruction
+read the task aloud
+read every time
+first
+then
+after that
+meanwhile
+next
+when you're done
+once you're done
+until
+continue until
+start from
+after measuring
+container
+tools
+equipment
+laptop
+computer
+simulation
+browser
+everyone
+for everyone
+to everyone
+whole group
+listen
+attention
+focus
+/\\b(read|measure|pour|put|place|lower|hold|take|bring|fetch|get|give|move|open|close|write|note|explain|describe|investigate|return|carry out)\\b/
+/\\b(let'?s|lets)\\s+\\w+/
+/\\b(we\\s+(need|should|have)\\s+to)\\b/
+/\\b(you\\s+have\\s+to)\\b/
+/\\b(can\\s+you)\\s+\\w+/
+/\\b(do\\s+you\\s+want\\s+to)\\s+\\w+/
+/\\b(someone(\\s+else)?\\s+(can|get|fetch|bring|measure|read))\\b/
+/\\b(first|then|next|after|before|meanwhile|until|once)\\b/
+/\\b(when\\s+you'?re\\s+done)\\b/
+/\\b(continue\\s+(measuring|reading|until))\\b/
+/\\b(put|place|pour|lower)\\s+.*\\s+(in|into|onto|there|here)\\b/
+/\\b(read)\\s+(the\\s+)?(instructions?|task|next|this|that|aloud)\\b/
+/\\b(follow)\\s+(the\\s+)?instructions?\\b/
+description
+it say(s)

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompts>
+    <prompt id="METACOGNITIVE">
+        <text>Hmm, onkohan teillä hankaluuksia? Kertokaa toisillenne, miten ymmärrätte tehtävän ja miettikää, miten pääsisitte siinä yhdessä eteenpäin.</text>
+        <text>Hyvää keskustelua!  Miten voisitte yhdessä ymmärtää tehtäväänne nykyistä paremmin?</text>
+        <text>Oivallista pohdintaa! Miten voisitte vielä auttaa toisianne, jotta pääsisitte ryhmänä eteenpäin?</text>
+        <text>Jutelkaa vielä yhdessä, miten se, mitä olette nyt tekemässä auttaa teitä tehtävässä. Näin pääsette hankalasta tilanteesta eteenpäin.</text>
+    </prompt>
+    <prompt id="COGNITIVE">
+        <text>Ilmassa näyttää olevan hämmennystä. Selittäkää vielä toisillenne, mitä yritätte tällä hetkellä ymmärtää.</text>
+        <text>Kuunnellessani teitä mietin, ymmärrätteköhän kaikki tehtävän keskeiset käsitteet. Mitä voisitte tehdä saavuttaaksenne yhteisen ymmärryksen tehtävän käsitteistä?</text>
+        <text>Varmistakaa, että teillä on riittävästi tietoa annetusta tapauksesta tehtävän suorittamiseksi. Jakakaa ajatuksia: mikä voisi auttaa yhteisen ymmärryksen saavuttamisessa?</text>
+    </prompt>
+     <prompt id="BEHAVIORAL">
+        <text>Odottakaas! Huomasin, etteivät kaikki välttämättä osallistu tehtäväntekoon. Miten voitte varmistaa, että kaikki pääsevät osallistumaan?</text>
+        <text>Hmm – onkohan kaikilla ollut mahdollisuus saada äänensä kuuluviin?</text>
+        <text>Mietitäänpä hetki – mitä mieltä jokainen on omasta osallistumisestaan tähän mennessä?</text>
+        <text>Miten voisitte muuttaa tämänhetkistä tapaanne toimia, jotta kaikki pääsisivät varmasti osallistumaan?</text>
+    </prompt>
+     <prompt id="SOCIOEMOTIONAL">
+        <text>Vaikuttaa siltä, että tunteet käyvät vähän kuumana. Miten voisitte keskustella vähän ystävällisemmin? </text>
+        <text>Yhteistyö on välillä haastavaa! Miten voisitte varmistaa, että kaikki ovat edelleen hyvillä mielin mukana?</text>
+        <text>Toimivassa ryhmässä tarvitaan jokaista! Miten voisitte tukea toisianne paremmin?</text>
+        <text>Miettikää hetki – miten voisitte ilmaista ajatuksianne niin, ettette loukkaa ketään toista.</text>
+    </prompt>
+     <prompt id="SHARED_PERSPECTIVE">
+        <text>Hienoa edistystä!  Ajattelettekohan kuitenkin asiaa omista näkökulmistanne? Pohtikaa, miten voisitte edistyä ryhmänä.  </text>
+        <text>Huomasin, että saatatte ajatella asiaa omista näkökulmistanne. Mikä voisi olla yhteinen suunnitelmanne tehtävän ratkaisemiseksi?</text>
+        <text>Voisinko auttaa teitä? Miettikää vielä, mitä yritätte ryhmänä saavuttaa. Näin saatte toisistanne tukea ja pääsette eteenpäin.</text>
+    </prompt>
+</prompts>

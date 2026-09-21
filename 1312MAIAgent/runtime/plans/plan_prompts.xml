@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompts>
+    <prompt id="METACOGNITIVE">
+        <text>Hmm, are you having some trouble? Explain to each other how you understand the task and think of how you could move forward together. </text>
+        <text>Good discussions! How could you together gain a better understanding of your current task?</text>
+        <text>Great reflecting! How could you still support each other so that you could progress as a group?</text>
+        <text>Try to still jointly discuss how your current approach is beneficial for this task. This will help you get past a difficult situation.</text>
+    </prompt>
+    <prompt id="COGNITIVE">
+        <text>There seems to be some confusion in the air. Explain to each other what you are trying to understand right now.</text>
+        <text>While listening to you, I wondered if you all understand the key concepts of the task. What could you do to reach a shared understanding of the task’s concepts?</text>
+        <text>Make sure that you have the needed information on the case to complete this task. Share ideas: what could help you reach a common understanding?</text>
+    </prompt>
+     <prompt id="BEHAVIORAL">
+        <text>Wait! I noticed that not everyone is necessarily participating in this task. How could you make sure everyone gets to participate?</text>
+        <text>Hmm – has everyone had a chance to have their voice heard?</text>
+        <text>Let’s think for a moment – what does everyone think about their own participation so far?</text>
+        <text>How could you change your current way of working to ensure that everyone can participate? </text>
+    </prompt>
+     <prompt id="SOCIOEMOTIONAL">
+        <text>It seems emotions are running a bit high. How could you talk to each other in a friendlier manner?</text>
+        <text>Cooperation is sometimes challenging! How can you make sure everyone can still participate in good spirits?</text>
+        <text>Every member is needed to form a functioning group. How could you better support each other?</text>
+        <text>Take a moment to think – how could you express your thoughts in a way that is not hurtful to others.</text>
+    </prompt>
+     <prompt id="SHARED_PERSPECTIVE">
+        <text>Well done on developing your thoughts! But are you still thinking about this from your own perspectives? Think how you could progress as a group.</text>
+        <text>I noticed that you might be thinking about this from individual points of view. What could be your joint plan for solving the task?</text>
+        <text>Could I help? Rethink what you are trying to accomplish here as a group. By doing this, you can support each other and move on.</text>
+    </prompt>
+</prompts>
