@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompts>
+
+	<prompt strategy="task" id="PROMPT_START_SOON">
+        <text>Thanks for joining! We will be starting soon.</text>
+    </prompt>
+        
+    <prompt strategy="task" id="INTRODUCE">
+        <text>We're starting! I'm [AGENT NAME].|||Tell the team your name and share something about yourself, such as a hobby you have or a game you like to play. Ask questions about what the others share. Take a couple of minutes to learn more about each other.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="GREET">
+        <text>Hi, [NAME].</text>
+        <text>Nice to meet you, [NAME].</text>
+        <text>Howdy, [NAME].</text>
+        <text>Hello, [NAME].</text>
+    </prompt>
+      
+    <prompt strategy="task" id="PROMPT_ACTIVITY_INTRO">
+        <text>Okay! Let's get started. ||| In this activity, you will explore the application of Lakoff and Johnson's Conceptual Metaphor Theory to the design of a shared symbol or symbols for your group project.  By the end, you need to choose both the shape of your symbol and the color scheme for weaving it.  Remember to keep it simple since you will only have 13 pattern threads altogether.</text>
+    </prompt>
+    
+    <prompt strateg="task" id="PROMPT_UPLOAD_IMAGES">
+    	<text>First, everyone please upload the image you choose for Week 3 homework. To do this, input the GoogleDrive image link or image URL into the text box on the bottom left and click the Share Image URL button. ||| Once you have shared your image to the discussion board, please describe your symbol image to the group.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_DISCUSS_FREELY">
+        <text>While I will ask each of you to take the lead at various points in the discussion, please engage in the chat to discuss each others’ ideas.</text>
+        <text>I will prompt each of you to take the lead on the discussion, but please feel free to add to each other's ideas as I do so.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_TASK_1">
+        <text>Okay! Let's start with some discussion questions. ||| In CMT, Lakoff and Johnson talk about the connection between metaphor and the human experience.  How do they explain the existence of typical patterns of metaphors across languages?</text>
+    </prompt>
+     
+    <prompt strategy="task" id="PROMPT_TASK_2">
+        <text>Let's move onto the next question. ||| How would you explain why sometimes there are inconsistencies.  For example, a fox might be a attractive person in one culture or a sneaky person in another culture.  Is this a reason not to believe Lakoff and Johnson's ideas?</text>
+    </prompt>
+      
+    <prompt strategy="task" id="PROMPT_TASK_3">
+        <text>Great discussion. Here's the next question. ||| Type some examples of metaphors Lakoff and Johnson wrote about in Images mode on google.  Based on what you see as you explore, how would you explain the connection between metaphors and symbols?</text>
+    </prompt>
+      
+    <prompt strategy="task" id="PROMPT_TASK_4">
+        <text>Okay! Let's move on to another question. ||| How are your chosen symbols related to shared aspects of the human experience, if not universally, then in your culture?</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_TASK_5">
+        <text>Good thoughts! Here's the next question to discuss. ||| If your group had to narrow down to one symbol that connects an experience you all share, what would it be and why?</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_TASK_6">
+        <text>Okay! Before we wrap up, decide on a color scheme for your chosen symbol.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_MATCH_1">
+        <text>[NAME1], start out by telling us what you think.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_MATCH_2">
+        <text>[NAME1], start out by telling us what you think.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_MATCH_3">
+        <text>[NAME1], start out by telling us what you think.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_MATCH_4">
+        <text>[NAME1], start out by telling us what you think.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_MATCH_MAX_ALL">
+        <text>[NAME1], start out by telling us what you think.</text>
+    </prompt>
+       
+    <prompt strategy="task" id="PROMPT_STEP_MATCH_MAX_NONE">
+        <text>[NAME1], start out by telling us what you think.</text>
+    </prompt>
+
+    <prompt strategy="task" id="PROMPT_STEP_ROTATE_1">
+        <text>[NAME1], why don't you tell us what you think now?</text>
+        <text>[NAME1], do you have anything to add? </text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_ROTATE_2">
+        <text>[NAME1], do you have anything to add? </text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_ROTATE_3">
+        <text>[NAME1], do you have anything to add?</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_ROTATE_4">
+        <text>[NAME1], do you have anything to add?</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_ROTATE_MAX_ALL">
+        <text>[NAME1], do you have anything to add?</text>
+    </prompt>
+    
+    <prompt strategy="task" id="PROMPT_STEP_ROTATE_MAX_NONE">
+        <text>[NAME1], do you have anything to add?</text>
+    </prompt>
+   
+     <prompt strategy="task" id="PROMPT_STEP_WRAP_UP">
+     <text> Alright! Now wrap up the discussion. ||| Please choose someone from your group who is going to explain your chosen symbol and color scheme in light of Lakoff and Johnson's CMT to the class. ||| I will be logging off soon but you may continue to discuss in the chat after I leave.
+     </text>
+     </prompt>
+
+</prompts>
