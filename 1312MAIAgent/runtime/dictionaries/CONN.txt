@@ -1,0 +1,73 @@
+i don't know
+i dont know
+i have no idea
+i'm not sure
+im not sure
+not sure
+no idea
+i don't get it
+i dont get it
+i don't understand
+i dont understand
+i didn't get it
+i didnt get it
+i don't know how
+i dont know how
+what is
+what was
+what does
+what do
+what did
+what day is
+which
+where
+how
+why
+is it
+was it
+wasn't it
+isn't it
+didn't it
+did he say
+did she say
+what do we have to do
+what are we supposed to do
+what do i have to do
+what should we do
+what does that mean
+what does this mean
+what does experimental setup mean
+what is the piece
+what is the second task
+like what
+or like what
+which one
+which one is
+which one was
+how much
+how much was it
+how much is it
+uh
+uhh
+umm
+hmm
+huh
+mmm
+mm
+\b(i\s+(do\s+not|don't|dont)\s+know)\b
+\b(i\s+(am|’m|'m)?\s*not\s+sure)\b
+\b(no\s+idea)\b
+\b(i\s+(do\s+not|don't|dont)\s+understand)\b
+\b(what|why|how|where|which)\b.*\?
+\b(is|was|were|did|does|do)\s+.*\?
+\bwhat\s+(does|do|is|was)\s+.*\s+(mean|means)\b
+\bwhat\s+is\s+.*\b
+\bwhat\s+was\s+.*\b
+\bwhat\s+(do|are)\s+.*\s+(have\s+to|supposed\s+to)\s+do\b
+\bwhat\s+is\s+the\s+(task|next\s+task|second\s+task)\b
+\bhow\s+much\b
+\bhow\s+many\b
+^(uh+|um+|hmm+|mm+|huh+)\b
+well uhs
+wel uhh
+well so

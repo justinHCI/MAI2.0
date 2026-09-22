@@ -1,0 +1,274 @@
+change management
+change process
+process model of change
+planned change
+emergent change
+teleological change
+dialectical change
+organizational change
+change initiative
+change programme
+change objective
+desired end state
+current state
+gap analysis
+diagnosis
+organizational diagnosis
+problem framing
+sensemaking
+interpretation
+data collection
+qualitative analysis
+quantitative analysis
+evidence-based decision making
+stakeholder
+stakeholder analysis
+stakeholder mapping
+stakeholder engagement
+key stakeholders
+internal stakeholders
+external stakeholders
+stakeholder expectations
+stakeholder interests
+power dynamics
+political behaviour
+organizational politics
+change agent
+change leadership
+leadership alignment
+top management support
+senior leadership
+middle management
+change sponsor
+governance structure
+decision-making process
+organizational structure
+organizational silos
+functional silos
+cross-functional integration
+coordination mechanisms
+organizational alignment
+strategic alignment
+shared vision
+shared goals
+alignment of interests
+misalignment
+organizational culture
+subculture
+cultural differences
+cultural integration
+cultural resistance
+resistance to change
+change resistance
+employee resistance
+sources of resistance
+barriers to change
+blockers
+supporters
+change readiness
+readiness for change
+perception of change
+attitudes to change
+buy-in
+commitment
+engagement
+participation
+involvement
+communication
+communication strategy
+internal communication
+change communication
+message framing
+transparency
+information sharing
+knowledge sharing
+sensegiving
+feedback loops
+feedback mechanisms
+learning
+organizational learning
+learning process
+reflection
+adaptation
+continuous improvement
+intervention
+change intervention
+behavioral intervention
+structural intervention
+technological intervention
+implementation
+implementation process
+implementation plan
+implementation strategy
+phased implementation
+pilot implementation
+pilot project
+rollout
+scaling
+change timeline
+milestones
+roadmap
+project management
+programme management
+change governance
+risk management
+risk assessment
+uncertainty
+complexity
+system complexity
+implementation risk
+failure risk
+change failure
+implementation failure
+user adoption
+adoption rate
+technology adoption
+resistance to technology
+digital transformation
+CRM system
+centralized CRM
+CRM implementation
+AI-driven analytics
+data integration
+data consolidation
+data sharing
+data quality
+data governance
+data ownership
+customer data
+stakeholder data
+information systems
+IT infrastructure
+system integration
+process integration
+standardization
+process redesign
+business process change
+operational efficiency
+effectiveness
+performance improvement
+value creation
+benefits realization
+cost-benefit analysis
+resource allocation
+capability building
+training
+training programmes
+skill development
+competence development
+user training
+support mechanisms
+coaching
+facilitation
+change capability
+organizational capability
+capacity building
+work practices
+ways of working
+behavior change
+mindset change
+norms
+routines
+institutionalization
+sustainability of change
+embedding change
+reinforcement
+monitoring
+evaluation
+review
+performance measurement
+KPI
+KPIs
+success metrics
+quick wins
+short-term wins
+momentum
+change fatigue
+workload pressure
+time constraints
+prioritization
+trade-offs
+external environment
+competitive pressure
+financial pressure
+resource constraints
+innovation
+AI strategy
+digital strategy
+strategic change
+long-term transformation
+short-term adjustment
+integration of systems
+integration of stakeholders
+collaboration
+interdepartmental collaboration
+coordination failure
+information asymmetry
+knowledge gaps
+trust building
+credibility
+legitimacy
+authority
+influence
+negotiation
+conflict
+tension
+compromise
+alignment process
+decision alignment
+goal conflict
+interest conflict
+organizational identity
+professional identity
+academic autonomy
+loss of autonomy
+control
+centralization
+decentralization
+standardization 
+flexibility
+local practices
+global systems
+change narrative
+vision communication
+value proposition
+benefits of change
+perceived benefits
+perceived risks
+costs of change
+impact assessment
+change impact
+user experience
+system usability
+acceptance
+rejection
+trial and error
+iteration
+adjustment process
+feedback-driven change
+adaptive implementation
+emergent outcomes
+project team
+schedule management 
+cost management 
+organizational change project  
+incremental change 
+revolutionary change 
+transformational change 
+adaptation 
+re-creation 
+proactive change 
+reactive change 
+three stage change model 
+Kotter’s 8 step change model 
+sustainable change 
+sustaining change 
+component model 
+holistic model 
+The McKinsey’s 7S model 
+Kotter’s framework 
+The Burke-Litwin causal model 
+agile change project management 
+stickability 
+spreadability 
+Bateman and Davi’s model of sustainability 

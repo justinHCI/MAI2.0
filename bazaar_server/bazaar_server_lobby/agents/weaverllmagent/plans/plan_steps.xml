@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan name="RegExAgent Plan">
+	<!-- "timeout" for a stage is an absolute number of seconds that elapses 
+	(from the script's beginning) before that stage starts.  -->
+	<!-- "delay" for a stage is the number seconds that elapses in-between stages.  -->
+   	<!-- a step's "type" determines which StepHandler handles the step - see PlanExecutor.properties.-->
+	<!-- "timeout" for a step is an upper-bound duraton for the step, after which next step starts.  -->
+    <!-- "delay" for a step is the delay *after* the step completes on its own.-->
+    <stage name="StageInitialization" type="other" delay="0">  
+    	<step type="prompt" delay="30" prompt="WAITING_TO_START">WAITING_TO_START</step> 
+    	<step type="prompt" delay="10" prompt="INTRODUCTION">INTRODUCTION</step>  
+    	<step type="prompt" delay="20" prompt="SEPARATE_WINDOW">SEPARATE_WINDOW</step>  
+    	<step type="prompt" delay="15" prompt="HOW_TO_QUERY_BOT">HOW_TO_QUERY_BOT</step>   
+     	<step type="greet" timeout="30" delay="5">GREETINGS</step> 
+    </stage>  
+    
+    <stage name="Stage0" type="other" delay="0"> 
+    	<step type="prompt" delay="90" prompt="CHOOSE_ONE_COLAB">CHOOSE_ONE_COLAB</step> 
+    	<step type="prompt" delay="120" prompt="SHARE_FILES">SHARE_FILES</step> 
+    </stage>  
+    
+    <stage name="Stage1" type="other" delay="0"> 
+        <step type="match" delay="60" prompt="PROMPT_STEP_MATCH" >PROMPT_STEP_MATCH</step>  
+    	<step type="prompt" delay="60" prompt="ANY_ISSUES">ANY_ISSUES</step> 
+    	<step type="prompt" delay="300" prompt="LOAD_OTHER_MOTIFS">LOAD_OTHER_MOTIFS</step> 
+    	<step type="prompt" delay="180" prompt="THEMES">THEMES</step> 
+    </stage>  
+
+    <stage name="Stage2" type="other" delay="0"> 
+    	<step type="prompt" delay="10" prompt="SELECT_MOTIFS">SELECT_MOTIFS</step> 
+     	<step type="prompt" delay="46" prompt="STAGE_2_PROMPT_1">STAGE_2_PROMPT_1</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_2">STAGE_2_PROMPT_2</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_3">STAGE_2_PROMPT_3</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_4">STAGE_2_PROMPT_4</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_5">STAGE_2_PROMPT_5</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_6">STAGE_2_PROMPT_6</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_7">STAGE_2_PROMPT_7</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_8">STAGE_2_PROMPT_8</step> 
+    	<step type="prompt" delay="53" prompt="STAGE_2_PROMPT_9">STAGE_2_PROMPT_9</step> 
+    	<step type="prompt" delay="120" prompt="STAGE_2_ENDING_PROMPT">STAGE_2_ENDING_PROMPT</step> 
+    </stage>  
+    
+    <stage name="Stage3" type="other" delay="0"> 
+    	<step type="prompt" delay="10" prompt="FIT_MOTIFS_INTO_DESIGN">FIT_MOTIFS_INTO_DESIGN</step> 
+    	<step type="prompt" delay="145" prompt="DECIDE_ROW_ARRANGEMENT">DECIDE_ROW_ARRANGEMENT</step> 
+    	<step type="prompt" delay="145" prompt="DECIDE_MOTIF_APPEARANCE">DECIDE_MOTIF_APPEARANCE</step>  
+    	<step type="prompt" delay="300" prompt="MOTIF_ORIENTATION">DECIDE_MOTIF_APPEARANCE</step> 
+    </stage>  
+    
+    <stage name="Stage4" type="other" delay="0">  
+    	<step type="prompt" delay="150" prompt="CSV_TO_APPEARANCE">CSV_TO_APPEARANCE</step> 
+    	<step type="prompt" delay="150" prompt="STAGE_4_PROMPT_1">STAGE_4_PROMPT_1</step> 
+    	<step type="prompt" delay="150" prompt="STAGE_4_PROMPT_2">STAGE_4_PROMPT_2</step> 
+    	<step type="prompt" delay="150" prompt="STAGE_4_PROMPT_3">STAGE_4_PROMPT_3</step> 
+    </stage> 
+    
+    <stage name="Stage5" type="other" delay="0">   
+    	<step type="prompt" delay="150" prompt="MOTIF_ASSUMPTION">MOTIF_ASSUMPTION</step>    
+    	<step type="prompt" delay="150" prompt="WHAT_DO_YOU_THINK">WHAT_DO_YOU_THINK</step>   
+    	<step type="prompt" delay="150" prompt="DO_I_UNDERSTAND">DO_YOU_UNDERSTAND</step>   
+    	<step type="prompt" delay="150" prompt="ASK_ME">ASK_ME</step> 
+    </stage> 
+    
+    <stage name="Stage6" type="other" delay="0">   
+    	<step type="prompt" delay="2080" prompt="KEEP_WORKING">KEEP_WORKING</step>   
+    </stage> 
+  
+    <stage name="EndStage" type="other" delay="0" timeout="5400">  
+        <step type="prompt" delay="20" prompt="PROMPT_STEP_FINAL" >Prompt_Step_Final</step>
+        <step type="chatlog" delay="2" >CHAT_LOGS</step> 
+    	<step type="send_end" delay="2">send_end</step>  
+        <step type="logout" delay="0">LOGOUT</step>
+    </stage>
+    
+</plan>

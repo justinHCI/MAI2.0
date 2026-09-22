@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompts>
+
+	<!-- GATED PROMPTS are in gatekeeper_prompts.xml -->
+
+
+	<!-- GREETING PROMPTS -->
+	
+    <!-- The INTRODUCE prompt is used automatically for 'greet' steps   -->
+    <prompt strategy="task" id="INTRODUCE">
+        <text>Hi! I'm OPE_Bot.|||Tell the team your name and share something about yourself, such as a hobby you have or a game you like to play. Ask questions about what the others share. Take a few moments to learn more about each other.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="GREET">
+        <text>Hi, [NAME].</text>
+        <text>Nice to meet you, [NAME].</text>
+        <text>Howdy, [NAME].</text>
+        <text>Hello, [NAME].</text>
+        <text>Whazup, [NAME]?</text>
+    </prompt>
+
+ 
+	<!-- HINTS & DISCUSSION FOR INITIALIZATION -->
+      
+    <prompt strategy="task" id="WAITING_TO_START">
+        <text>Welcome! We're waiting 1 minute to allow time for any other students to join in.|||In the meantime, you can start reading the introduction on the left.</text>
+    </prompt> 
+      
+    <prompt strategy="task" id="STARTING">
+        <text>We're starting!</text>
+    </prompt> 
+      
+    <prompt strategy="task" id="READ_INTRO">
+        <text>Start by studying the introduction on the left.|||Type "ready" when you're ready to move on. We'll move on in a few minutes or when everyone is ready.</text>
+    </prompt> 
+     
+    <prompt strategy="task" id="TAKING_TURNS">
+        <text>In this activity, your entire team is responsible for each response but you will take turns doing the write-up. ***Only one person at a time may do the editing.***</text>
+    </prompt> 
+     
+    <prompt strategy="task" id="ENTER_READY">
+        <text>I'll give you time to write up each response. If you're done early, we'll move on after the entire team has entered "ready" in this chat window.</text>
+    </prompt> 
+	
+ 
+	<!-- HINTS & DISCUSSION FOR SCENARIO 1 -->
+	
+     <prompt strategy="task" id="SCENARIO_1_INTRO">
+     <text>Here we go. I've displayed your first scenario on the left. You'll need to scroll down as we go along. I'll give you a little time to look at it (or type "ready" when you're done).</text>
+     </prompt> 
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_1_Q1  -->
+    
+     <prompt strategy="task" id="SCENARIO_1_Q1">
+     <text>Okay, your first prompt is displayed on the left.|||Remember to type "ready" when you're ready to move on.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_1_Q1_HINT">
+     <text>A hint is displayed on left.|||Remember to type "ready" when you're ready to move on.</text>
+     </prompt> 
+    
+    <!-- HINTS & DISCUSSION FOR MOST SCENARIOS  -->
+    
+     <prompt strategy="task" id="SCENARIO_Q1">
+     <text>Your first question for this scenario is displayed on the left.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_HINT">
+     <text>A hint is displayed on left.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_Q2">
+     <text>Another question is displayed on the left.</text>
+     </prompt>  
+    
+     <prompt strategy="task" id="SCENARIO_Q3">
+     <text>Another question is displayed on the left.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_Q4">
+     <text>The last question for this scenario is displayed on the left.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_1_Q2  -->
+    
+     <prompt strategy="task" id="SCENARIO_1_Q2">
+     <text>Another prompt on the left.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_1_Q2_HINT">
+     <text>A hint is displayed on left.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_1_Q3  -->
+    
+     <prompt strategy="task" id="SCENARIO_1_Q3">
+     <text>Okay, now I've displayed a prompt about workload and performance metrics.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_1_Q3_HINT">
+     <text>I've displayed my hint for workload and performance metrics for this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_1_Q4  -->
+    
+     <prompt strategy="task" id="SCENARIO_1_Q4">
+     <text>Cost is always important. I've displayed a prompt about balancing cost and performance on the left.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_1_Q4_HINT">
+     <text>I've displayed my hint for balancing cost and performance in this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+	
+  
+	<!-- HINTS & DISCUSSION FOR SCENARIO 2 -->
+	
+     <prompt strategy="task" id="SCENARIO_2_INTRO">
+     <text>Okay! I've displayed a new scenario on the left. I'll give you some time to look at it.</text>
+     </prompt> 
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_2_Q1  -->
+    
+     <prompt strategy="task" id="SCENARIO_2_Q1">
+     <text>I've displayed a prompt about autoscaling for this scenario.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_2_Q1_HINT">
+     <text>I've displayed my hint to an autoscaling policy for this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_2_Q2  -->
+    
+     <prompt strategy="task" id="SCENARIO_2_Q2">
+     <text>I've displayed a prompt about how aggressively to scale.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_2_Q2_HINT">
+     <text>I've displayed my hint for how aggressively to scale in this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_2_Q3  -->
+    
+     <prompt strategy="task" id="SCENARIO_2_Q3">
+     <text>A prompt about workload and performance metrics is now displayed.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_2_Q3_HINT">
+     <text>I've displayed my hint for workload and performance metrics for this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_2_Q4  -->
+    
+     <prompt strategy="task" id="SCENARIO_2_Q4">
+     <text>Now I've displayed a prompt about balancing cost and performance.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_2_Q4_HINT">
+     <text>I've displayed my hint for balancing cost and performance in this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+	
+  
+	<!-- HINTS & DISCUSSION FOR SCENARIO 3 -->
+	
+     <prompt strategy="task" id="SCENARIO_3_INTRO">
+     <text>Alright! The last scenario is now displayed on the left. I'll give you a little time to look at it.</text>
+     </prompt> 
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_3_Q1  -->
+    
+     <prompt strategy="task" id="SCENARIO_3_Q1">
+     <text>A prompt about autoscaling for this scenario is now displayed.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_3_Q1_HINT">
+     <text>I've displayed my hint to an autoscaling policy for this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_3_Q2  -->
+    
+     <prompt strategy="task" id="SCENARIO_3_Q2">
+     <text>Now a prompt about how aggressively to scale is displayed.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_3_Q2_HINT">
+     <text>I've displayed my hint for how aggressively to scale in this scenario. Take a look at and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_3_Q3  -->
+    
+     <prompt strategy="task" id="SCENARIO_3_Q3">
+     <text>I've displayed a prompt about workload and performance metrics.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_3_Q3_HINT">
+     <text>My hint to workload and performance metrics for this scenario is now displayed. Take a look at and revise your response in the cell above appropriate.</text>
+     </prompt> 
+    
+    
+    <!-- HINTS & DISCUSSION FOR SCENARIO_3_Q4  -->
+    
+     <prompt strategy="task" id="SCENARIO_3_Q4">
+     <text>A prompt about balancing cost and performance for this scenario is displayed on the left.</text>
+     </prompt> 
+    
+     <prompt strategy="task" id="SCENARIO_3_Q4_HINT">
+     <text>Last prompt! I've displayed my hint for balancing cost and performance in this scenario. Take a look and revise your response in the cell above appropriate.</text>
+     </prompt>
+    
+
+	<!-- ENDING PROMPTS -->
+	
+    <prompt strategy="task" id="PROMPT_STEP_SUBMISSION">
+     <text>*** Finally, when you're ready, ONE TEAM MEMBER should submit your work. *** You'll be done after you've submitted. ***|||Thanks for participating in this activity!</text>
+    </prompt>
+     
+    <prompt strategy="task" id="DONE">
+     	<text>That's all! Thanks for participating in this activity.</text>
+    </prompt>
+     
+    <prompt strategy="task" id="FINAL">
+     	<text>It's time for me to logoff. Bye!</text>
+    </prompt>
+     
+     
+
+	<!-- ASSIGNMENT PROMPTS -->
+    
+    <prompt strategy="task" id="MATCH">
+        <text>[NAME1], you're in charge of writing up the first response. Remember that the entire team is responsible -- [NAME1] is just doing the write-up.|||Use this chat window to discuss as a team.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="MATCH_1">
+        <text>[NAME1], you're in charge of writing up the first response. Remember that the entire team is responsible -- [NAME1] is just doing the write-up.|||Use this chat window to discuss as a team.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="MATCH_2">
+        <text>[NAME1], you're in charge of writing up the first response. Remember that the entire team is responsible -- [NAME1] is just doing the write-up.|||Use this chat window to discuss as a team.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="MATCH_3">
+        <text>[NAME1], you're in charge of writing up the first response. Remember that the entire team is responsible -- [NAME1] is just doing the write-up.|||Use this chat window to discuss as a team.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="MATCH_4">
+        <text>[NAME1], you're in charge of writing up the first response. Remember that the entire team is responsible -- [NAME1] is just doing the write-up.|||Use this chat window to discuss as a team. </text>
+    </prompt>
+
+    <prompt strategy="task" id="MATCH_MAX_ALL">
+        <text>[NAME1], you're in charge of writing up the first response. Remember that the entire team is responsible -- [NAME1] is just doing the write-up.|||Use this chat window to discuss as a team.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_FANCY">
+        <text>[NAME1], you'll do the write-up this time. Remember that the entire team is responsible.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_FANCY_1">
+        <text>[NAME1], you'll do the write-up this time. Remember that the entire team is responsible.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_FANCY_2">
+        <text>[NAME1], you'll do the write-up this time. Remember that the entire team is responsible.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_FANCY_3">
+        <text>[NAME1], you'll do the write-up this time. Remember that the entire team is responsible.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_FANCY_4">
+        <text>[NAME1], you'll do the write-up this time. Remember that the entire team is responsible.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_FANCY_MAX_ALL" intention="ROLE_ASSIGNMENT_TEMPLATE_4_FANCY-MOB">
+        <text>[NAME1], you'll do the write-up this time. Remember that the entire team is responsible.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_PLAIN">
+        <text>[NAME1], you're in charge of the write-up this time.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_PLAIN_1">
+        <text>[NAME1], you're in charge of the write-up this time.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_PLAIN_2">
+        <text>[NAME1], you're in charge of the write-up this time.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_PLAIN_3">
+        <text>[NAME1], you're in charge of the write-up this time.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_PLAIN_4">
+        <text>[NAME1], you're in charge of the write-up this time.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="ROTATE_PLAIN_MAX_ALL" intention="ROLE_ASSIGNMENT_TEMPLATE_4-MOB">
+        <text>[NAME1], you're in charge of the write-up this time.</text>
+    </prompt>
+
+
+</prompts>

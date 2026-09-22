@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agent name="MAI">
+    <components>
+        <!-- State memory for shared state across components -->
+        <component name="stateMemory" type="Memory" class="basilica2.agents.components.StateMemory" properties=""/>
+		<component name="ccListener" type="Filter" class="basilica2.socketchat.WebsocketChatClient" properties="WebsocketChatClient.properties"/>
+       <!-- <component name="outputActor" type="Actor" class="basilica2.mai.listeners.MAIActor" properties=""/>-->
+        
+        <component name="inputCoordinator" type="Coordinator" class="basilica2.agents.components.InputCoordinator" properties=""/>
+        <component name="outputCoordinator" type="Coordinator" class="basilica2.agents.components.OutputCoordinator" properties=""/>
+    </components>
+    
+    <connections>
+        <!-- from MultiModalFilter to input coordinator -->
+        <connection from="ccListener" to="inputCoordinator"/>
+        
+        <!-- InputCoordinator processes events (preprocessors run here) -->
+        <connection from="inputCoordinator" to="inputCoordinator"/>
+      
+      	<connection from="inputCoordinator" to="outputCoordinator"/>
+        
+        <connection from="outputCoordinator" to="ccListener"/>
+      	
+      	
+
+        
+        <!-- OutputCoordinator → OutputActor: sends prompts to display -->
+        <!--<connection from="outputActor" to="outputCoordinator"/>-->
+    </connections>
+</agent>

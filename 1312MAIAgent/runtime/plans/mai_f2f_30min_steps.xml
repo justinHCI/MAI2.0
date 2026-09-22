@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan name="mai_f2f_30min_steps">
+
+ 
+<!-- a step's "type" determines which StepHandler handles the step - see PlanExecutor.properties.-->
+<!-- "timeout" for a step is an upper-bound duration for the step, after which next step starts.  -->
+<!-- "delay" for a step is the delay *after* the step completes on its own.-->
+
+<!-- "timeout" for a stage is an absolute number of seconds that elapses 
+	(from the script's beginning) before that stage starts.  -->
+<!-- "delay" on a step is the delay *after* the step completes, in seconds. do not be deceived!-->
+
+
+<!-- in the timeout that is in the stage level,it means that after <timeout> value, this stage will execute no matter what -->
+
+<!-- DELAY SHOULD BE PUT IN ALL STEPS HERE, NOT TIMEOUT, delay=300 in silence step -->
+    <stage name="session">
+        <step type="silence" delay="20">SILENCE</step>
+       	<step type="listen" delay="1200">LISTEN</step>
+       <!-- <step type="prompt" timeout="1000">END_OF_SESSION</step> -->
+        <step type="chatlog" delay="2" timeout="1000">CHATLOG</step>
+    </stage>
+</plan>
