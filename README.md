@@ -8,6 +8,181 @@ MAI is a conceptual design, with core components of listneing to collaborative l
 
 Documentation under construction...
 
+
+
+On the servers, this guide assumes the repository is cloned to `~/MAI2.0`.
+
+### Startup order (per server instance)
+
+1. Bazaar lobby (Docker)
+2. MAI agent (Java)
+3. `server.py` (Whisper + diart)
+4. `unified_asio_client.py` on the local machine (once all servers are listening)
+
+---
+
+## 2. Server side
+
+### Requirements
+
+- An SSH client (PuTTY on Windows, or `ssh` on macOS/Linux)
+- An SSH private key for the server (**keep it out of the repository**)
+- Docker and Docker Compose installed on the server
+- Java 8 (`/usr/lib/jvm/java-8-openjdk-amd64`)
+- This repository cloned to `~/MAI2.0`, with the Python environment set up (see `README.md`)
+
+### Part 1: Connect to each server
+
+**PuTTY (Windows)**
+
+1. Open PuTTY.
+2. In *Host Name*, enter `ubuntu@<SERVER_IP>` (including `ubuntu@` avoids an extra login prompt).
+3. Port `22`, connection type `SSH`.
+4. Go to *Connection → SSH → Auth → Credentials* and browse to your private key file (`.ppk`).
+5. Click *Open*, and log in as `ubuntu` if not already added.
+6. Repeat for each instance (mai1, mai2, mai3, …), using a separate PuTTY window for each.
+
+**macOS / Linux**
+
+```bash
+ssh -i /path/to/your_key ubuntu@<SERVER_IP>
+```
+
+### Part 2: Start the Bazaar lobby (Docker)
+
+On each instance:
+
+```bash
+cd ~/MAI2.0/bazaar_server/bazaar_server_lobby
+sudo docker compose up -d
+```
+
+Verify that the container is up:
+
+```bash
+sudo docker ps
+```
+
+> The repository root also contains its own `docker-compose.yml`. Always `cd` into `bazaar_server_lobby` before starting the lobby.
+
+### Part 3: Start a tmux session
+
+tmux keeps the agent and `server.py` running after you close the terminal.
+
+```bash
+tmux new-session -s mai
+```
+
+Create a second window inside tmux:
+
+```
+Ctrl+B, then c
+```
+
+Switch between windows:
+
+```
+Ctrl+B, then 0   # window 0 (agent)
+Ctrl+B, then 1   # window 1 (server.py)
+```
+
+Detach with `Ctrl+B, then d`, and reattach later with `tmux attach -t mai`.
+
+### Part 4: Start the MAI agent (tmux window 0)
+
+Press `Ctrl+B`, then `0`, and run:
+
+```bash
+cd ~/MAI2.0/1312MAIAgent/runtime
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
+java -cp "../bin:../../BasilicaCore/bin:../../BaseAgent/bin:../../SocialAgent/build/classes:../../LightSideMessageAnnotator/bin:../../Genesis-Plugins/bin:../../SocketIOClient/bin:../../SocketIOClient/lib/socket.io-client-2.1.0.jar:../../SocketIOClient/lib/engine.io-client-2.1.0.jar:../../SocketIOClient/lib/okhttp-4.0.1.jar:../../SocketIOClient/lib/okio-2.3.0.jar:../../SocketIOClient/lib/json-20090211.jar:../../SocketIOClient/lib/json-org.jar:../../SocketIOClient/lib/annotations-13.0.jar:../../SocketIOClient/lib/kotlin-stdlib-1.3.41.jar:../../SocketIOClient/lib/kotlin-stdlib-common-1.3.41.jar:../../BaseAgent/lib/:../../BasilicaCore/lib/:../../BasilicaCore/lib/OtherLibraries/Utilities.jar:../../BasilicaCore/lib/OtherLibraries/Xerces/xercesImpl.jar:../../BasilicaCore/lib/OtherLibraries/Xerces/xml-apis.jar:../../BaseAgent/lib/commons-lang3-3.2.1.jar:../../BaseAgent/lib/Environments/ConcertChat/Libraries/*" basilica2.mai.operation.MAIAgentOperation
+```
+
+Notes:
+
+- The command must be run from `1312MAIAgent/runtime`, because all classpath entries are relative to that folder.
+- The classpath uses `:` as the separator (Linux/macOS). On Windows, use `;`.
+
+Useful commands:
+
+```bash
+# Check which ports are active
+ss -tlnp | grep -E "80[0-9][0-9]"
+
+# Stop a running agent (this kills ALL java processes on the machine)
+pkill -f "java"
+```
+
+### Part 5: Start `server.py` (tmux window 1)
+
+First, set the Whisper and diart parameters for the group in the `.env` file next to `server.py` (see [Configuring each group](#configuring-each-group) below). Then press `Ctrl+B`, then `1`, and run:
+
+```bash
+cd ~/MAI2.0
+source .venv/bin/activate
+python server.py
+```
+
+Expected output:
+
+```
+Server will listen on 0.0.0.0:8080
+Listening... Group ID: xxxxxx
+```
+
+### Part 6: Final checks and testing
+
+1. Start `unified_asio_client.py` on the local machine (see [Client side](#3-client-side)).
+2. Speak near a group's microphone.
+3. Check the `server.py` logs: transcribed text should appear.
+4. Say a trigger phrase such as *"I don't know about change management"* several times.
+5. After 3 or more repetitions, MAI should detect the trigger and play an audio response through the correct speaker.
+
+---
+
+## 3. Client side
+
+The client runs on a local machine connected to the audio devices, and needs no particular Python environment beyond the client requirements (`requirements_client.txt`).
+
+### Configuring each group
+
+Before each session, for every group:
+
+1. **Whisper settings.** Edit the `.env` file on the corresponding server (for example with WinSCP to navigate and Notepad++ to edit):
+   - `language`: `fi` for Finnish-speaking groups, `en` for English-speaking groups.
+   - `size`: `large-v3`.
+   - `pipeline-max-speakers`: the number of participants in that group.
+
+   Check `.env` for the exact variable names, save the file, then start (or restart) `server.py`.
+
+2. **`groups.json`** (in the client folder, next to `unified_asio_client.py` and the audio folders). Make sure that:
+   - the group's microphone and speaker channels are correct (group 1 uses channel 1, group 2 uses channel 3, group 3 uses channel 5, and so on);
+   - the IP address of the corresponding server is entered;
+   - the correct audio folder (Finnish or English) is selected.
+
+### Running the client
+
+1. Check that the Dante Virtual Soundcard has started, is set to **ASIO**, is set to **16 channels**, and shows an IP address.
+2. Make sure every server has its lobby, agent and `server.py` running and is listening.
+3. Wait until all groups have begun their collaborative task. Start the client about 5 minutes after the last group has started.
+4. Run the client from a local terminal (for example PowerShell inside VS Code):
+
+   ```
+   python unified_asio_client.py
+   ```
+
+   It must be run from this **single** script, so that more than one audio device can connect through the ASIO device connections.
+5. Check that each server shows transcription and a listening microphone.
+
+### Troubleshooting
+
+- **A server starts hallucinating** (produces nonsense transcription): stop it with `Ctrl+C` in its tmux window 1 and start `server.py` again.
+- **Agent will not start / port already in use:** check active ports with `ss -tlnp | grep -E "80[0-9][0-9]"`, stop the old agent with `pkill -f "java"`, and start it again.
+- **Lobby not reachable:** run `sudo docker ps` in the lobby folder and confirm the container is running.
+- **`ClassNotFoundException` or missing jar when starting the agent:** confirm you started it from `1312MAIAgent/runtime` and that all the folders in the [repository layout](#repository-layout) exist at the repository root.
+
 ## Transcription and diarization with a remote microphone
 
 
