@@ -1,3 +1,5 @@
+## Documentation under construction...
+
 # MAI
 
 MAI, a Metacognitive AI agent, is a proactive speech agent that supports group-level regulation of learning in face-to-face collarborative learning settings. MAI recognizes student speech, determines whether there are  trigger situations which require students to regulate learning, and speaks proactively to invite students to regulate their learning. MAI was developed at the Learning and Educational Technology Lab at the University of Oulu. Direct inquiries about MAI to Justin Edwards, Marta Sobocinski, and Sanna Järvelä in that lab.
@@ -5,9 +7,6 @@ MAI, a Metacognitive AI agent, is a proactive speech agent that supports group-l
 Cite: Edwards, J., Nguyen, A., Lämsä, J., Sobocinski, M., Whitehead, R., Dang, B., Roberts, A.S., & Järvelä, S. (2025). Human-AI collaboration: Designing artificial agents to facilitate socially shared regulation among learners. British Journal of Educational Technology, 56, 712–733 https://doi.org/10.1145/3640794.3665585
 
 MAI is a conceptual design, with core components of listneing to collaborative learning discussions, recognizing triggers for regulation of learning, and proactively inviting regulation. Every iteration of MAI has these core aims but accomplishes them in different ways. The repository here, which we refer to as "MAI 2.0" uses locally-hosted Whisper large-v3 for speech recognition, diart for speaker diarization, Bazaar for dialog management which implements the Trigger Regulation framework, and human-designed and recorded audio to invite regulation. All of our code and materials here are open source and can be reused according to our license information provided below. Software is provided as-is and does not oblige its creators to collaborate or provide technical support on its implementation and development. 
-
-Documentation under construction...
-
 
 
 On the servers, this guide assumes the repository is cloned to `~/MAI2.0`.
